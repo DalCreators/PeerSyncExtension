@@ -310,7 +310,7 @@ export class YjsSync {
   private _connect(serverUrl: string, username: string) {
     this._myUsername = username;
     this._socket = io(serverUrl, {
-      transports: ['websocket'],
+      transports: ['polling', 'websocket'],
       timeout: 10000
     });
 
